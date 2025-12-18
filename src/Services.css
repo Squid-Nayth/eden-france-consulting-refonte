@@ -1,0 +1,135 @@
+/* Services Section */
+.services-section {
+  padding: 60px 20px;
+  background-color: #ffffff;
+  color: #333;
+  text-align: center;
+  position: relative;
+  z-index: 5;
+}
+
+.services-header h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.services-subtitle {
+  font-size: 1rem;
+  color: #777;
+  font-style: italic;
+  font-weight: 300;
+  margin-bottom: 60px;
+  line-height: 1.5;
+}
+
+/* Widgets Container */
+.widgets-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px; /* Space between widgets */
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto 60px auto;
+}
+
+/* Connector Line */
+.widgets-connector {
+  position: absolute;
+  top: 75px; /* Half of circle height (150px / 2 = 75px) */
+  left: 15%; /* Start a bit inside */
+  right: 15%; /* End a bit inside */
+  border-top: 2px dotted #aaa;
+  z-index: 0;
+}
+
+/* Widget Item */
+.widget-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  position: relative;
+  z-index: 1; /* Above connector */
+}
+
+/* Circle & Icon */
+.widget-icon-circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #f8f9fa; /* Very light gray */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  transition: all 0.4s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.widget-icon {
+  width: 60px; /* Adjust size as needed */
+  height: auto;
+  transition: all 0.4s ease;
+  filter: contrast(0.8); /* Slight adjustment to make blacks generic */
+  mix-blend-mode: multiply; /* Hides white background on light circle */
+}
+
+/* Hover Effects */
+.widget-icon-circle:hover {
+  background-color: #3e2b46; /* Use a dark purple/black tone from the image */
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(62, 43, 70, 0.4);
+}
+
+.widget-icon-circle:hover .widget-icon {
+  /* Invert colors to make black icons white. 
+     If the JPG has a white background, inverting makes it black.
+     mix-blend-mode: screen hides the black background.
+  */
+  filter: invert(1) brightness(2);
+  mix-blend-mode: screen; 
+}
+
+/* Titles & Descriptions */
+.widget-item h3 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #444;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.widget-desc {
+  font-size: 0.9rem;
+  color: #777;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+/* Footer Note */
+.footer-note {
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: 0.8rem;
+  color: #666;
+  font-style: italic;
+  font-family: serif; /* Look for a serif font for that elegant footer text */
+  line-height: 1.5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .widgets-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+  
+  .widgets-connector {
+    display: none; /* Hide connector on mobile */
+  }
+}
