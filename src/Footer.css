@@ -76,12 +76,22 @@
   width: 35px;
   height: 35px;
   background-color: #fff;
-  color: #b586a3; /* Match footer color */
-  font-weight: bold;
-  text-decoration: none;
-  font-size: 1rem;
   border-radius: 2px;
   transition: opacity 0.3s;
+}
+
+.social-icon img {
+  width: 16px; /* Adjust icon size inside the box */
+  height: 16px;
+  /* Since these are SVGs from repo, they might be black or colored. 
+     If we want them to match the theme color (#b586a3), we can use a filter 
+     if the SVGs are black. 
+     A filter to turn black to #b586a3 approx:
+     filter: invert(66%) sepia(10%) saturate(1143%) hue-rotate(274deg) brightness(88%) contrast(84%);
+     Or just leave them as-is if they are already colored.
+     Let's assume user wants the shape colored in the theme color.
+  */
+  filter: invert(66%) sepia(10%) saturate(1143%) hue-rotate(274deg) brightness(88%) contrast(84%); 
 }
 
 .social-icon:hover {

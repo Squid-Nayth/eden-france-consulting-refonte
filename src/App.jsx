@@ -1,21 +1,42 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import './Services.css';
 import logo from './assets/img/logo-default-white.png';
+import logoDark from './assets/img/logo-default.png';
 import lightbulb from './assets/img/widgets/lightbulble 3.svg';
 import documentIcon from './assets/img/widgets/vecteezy_document-icon-template-black-color-editable-document-icon_6692271.svg';
 import globe from './assets/img/widgets/globe-2.svg';
 import iconBag from './assets/img/widgets/bag-icone.svg';
 import iconPen from './assets/img/widgets/pencil-logo.svg';
 import iconClip from './assets/img/widgets/vecteezy_attachment-icon-for-website-symbol_6123098.svg';
-import imgWoman from './assets/img/970x647/35.jpg';
-import imgMission from './assets/img/970x647/32.jpg';
-import imgServices from './assets/img/970x647/33.jpg';
+import imgWoman from './assets/img/970x647/32.jpg';
+import imgMission from './assets/img/970x647/35.jpg';
+import imgServices from './assets/img/970x647/34.jpg';
 import logoQualiopi from './assets/img/LogoQualiopi-300dpi-Avec-Marianne.png';
+import iconFb from './assets/img/widgets/facebook-svgrepo-com.svg';
+import iconGplus from './assets/img/widgets/google-plus-g-svgrepo-com.svg';
 import './Partners.css';
 import './Footer.css';
 
 function App() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const offset = window.scrollY;
+      if (offset > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <div className="app-container">
       <div className="hero-wrapper">
@@ -25,9 +46,9 @@ function App() {
         </div>
 
         {/* Header */}
-        <header className="landing-header animated fadeInDown">
+        <header className={`landing-header animated fadeInDown ${isScrolled ? 'scrolled' : ''}`}>
           <div className="logo-container">
-            <img src={logo} alt="Eden France Consulting" />
+            <img src={isScrolled ? logoDark : logo} alt="Eden France Consulting" />
           </div>
           <nav>
             <ul className="nav-menu">
@@ -172,7 +193,7 @@ function App() {
           </div>
 
           <div className="partner-card icon-card">
-            <img src={iconPen} alt="Avocats" className="icon-card-icon" />
+            <img src={iconPen} alt="Avocats" className="icon-card-icon icon-pen-large" />
             <h3 className="icon-card-title">AVOCATS</h3>
             <p className="icon-card-desc">Spécialisés en droit Social, du Travail, Fiscal & Droit des Affaires</p>
           </div>
@@ -205,8 +226,12 @@ function App() {
 
               <h3 className="footer-heading footer-subheading">Suivez nous !</h3>
               <div className="social-links">
-                <a href="#" className="social-icon">f</a>
-                <a href="#" className="social-icon">G+</a>
+                <a href="#" className="social-icon">
+                  <img src={iconFb} alt="Facebook" />
+                </a>
+                <a href="#" className="social-icon">
+                  <img src={iconGplus} alt="Google Plus" />
+                </a>
               </div>
             </div>
 
