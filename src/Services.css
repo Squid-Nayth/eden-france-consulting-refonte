@@ -10,7 +10,7 @@
 
 .services-header h2 {
   font-size: 2rem;
-  font-weight: 400;
+  font-weight: 300; /* Lighter weight */
   color: #444;
   margin-bottom: 20px;
 }
@@ -96,7 +96,7 @@
 /* Titles & Descriptions */
 .widget-item h3 {
   font-size: 1.25rem;
-  font-weight: 400;
+  font-weight: 300; /* Lighter weight */
   color: #444;
   margin-bottom: 15px;
   text-transform: uppercase;
