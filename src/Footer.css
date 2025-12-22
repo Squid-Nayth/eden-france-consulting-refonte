@@ -137,13 +137,16 @@
   gap: 5px;
 }
 
-.footer-links a {
+.footer-links a,
+.footer-links span {
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
   transition: color 0.3s;
+  cursor: pointer;
 }
 
-.footer-links a:hover {
+.footer-links a:hover,
+.footer-links span:hover {
   color: #fff;
 }
 

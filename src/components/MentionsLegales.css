@@ -1,0 +1,159 @@
+.mentions-legales-page {
+  padding-top: 90px; /* Space for the fixed header */
+  background-color: #f9f9f9;
+  min-height: 100vh;
+}
+
+.mentions-banner {
+  background: linear-gradient(135deg, #6a4c78 0%, #4a3456 100%);
+  padding: 40px 0;
+  color: #ffffff;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  /* margin-top is no longer needed if we use padding-top on the page */
+}
+
+.mentions-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCI+PHBhdGggZD0iTTAgNTAgNTAgMCAxMDAgNTAgNTAgMTAwIDAgNTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyNTUsIDI1NSwgMjU1LCAwLjEpIiBzdHJva2Utd2lkdGg9IjEiLz48L3N2Zz4=');
+  background-size: 50px 50px;
+  opacity: 0.2;
+}
+
+.mentions-banner .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mentions-banner h1 {
+  font-size: 1.8rem;
+  margin: 0;
+  color: #ffffff !important;
+  font-weight: 300;
+  text-transform: capitalize;
+}
+
+.breadcrumbs {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  color: #ffffff;
+}
+
+.breadcrumb-link {
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.breadcrumb-link:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.mentions-content {
+  padding: 60px 0;
+  background: white;
+}
+
+.mentions-content .container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+.legal-info {
+  text-align: left;
+  color: #606060;
+}
+
+.legal-info h2 {
+  font-size: 2.5rem;
+  color: #34343c;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.legal-info .subtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  margin: 0 0 5px 0;
+  color: #888;
+}
+
+.content-block {
+  margin-top: 30px;
+}
+
+.content-block h3 {
+  font-size: 1.1rem;
+  color: #6a4c78;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.content-block p {
+  margin-bottom: 10px;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.content-block a {
+  color: #6a4c78;
+  text-decoration: none;
+}
+
+.content-block a:hover {
+  text-decoration: underline;
+}
+
+address {
+  font-style: normal;
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+.back-button-container {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.back-home-btn {
+  background-color: #4a3456;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.back-home-btn:hover {
+  background-color: #6a4c78;
+}
+
+@media (max-width: 768px) {
+  .mentions-banner .container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 0 20px;
+  }
+  .mentions-content .container {
+    padding: 0 20px;
+  }
+  .legal-info h2 {
+    font-size: 1.8rem;
+  }
+}
