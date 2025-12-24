@@ -17,9 +17,9 @@
 
 .services-subtitle {
   font-size: 1rem;
-  color: #777;
+  color: var(--text-muted);
   font-style: italic;
-  font-weight: 300;
+  font-weight: 400;
   margin-bottom: 60px;
   line-height: 1.5;
 }
@@ -104,10 +104,10 @@
 }
 
 .widget-desc {
-  font-size: 0.9rem;
-  color: #777;
+  font-size: 0.95rem; /* Slightly larger */
+  color: var(--text-muted);
   line-height: 1.6;
-  font-weight: 300;
+  font-weight: 400; /* Increased weight */
 }
 
 /* Footer Note */

@@ -38,7 +38,7 @@
   font-size: 1.8rem;
   margin: 0;
   color: #ffffff !important;
-  font-weight: 300;
+  font-weight: 400;
   text-transform: capitalize;
 }
 
@@ -71,7 +71,7 @@
 
 .legal-info {
   text-align: left;
-  color: #606060;
+  color: var(--text-main);
 }
 
 .legal-info h2 {

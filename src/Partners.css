@@ -18,9 +18,9 @@
 
 .partners-subtitle {
   font-size: 1rem;
-  color: #777;
+  color: var(--text-muted);
   font-style: italic;
-  font-weight: 300;
+  font-weight: 400;
   max-width: 800px;
   margin: 0 auto;
   line-height: 1.6;
@@ -141,9 +141,9 @@
 
 .icon-card-desc {
   font-size: 0.85rem;
-  color: #777;
+  color: var(--text-muted);
   line-height: 1.5;
-  font-weight: 300;
+  font-weight: 400;
   max-width: 250px;
 }
 

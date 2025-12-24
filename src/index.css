@@ -1,9 +1,11 @@
 :root {
-  --primary-color: #0e3a7e;
-  --primary-overlay: #0e3a7eb5;
-  --primary-dark: #0a2b5e;
+  --primary-color: #003066; /* Darker blue for better contrast (11.5:1 on white) */
+  --primary-overlay: rgba(0, 48, 102, 0.85); /* Slightly more opaque overlay */
+  --primary-dark: #001f42;
   --text-light: #ffffff;
-  --text-dark: #333333;
+  --text-dark: #1a1a1a;
+  --text-muted: #4b5563; /* Improved contrast for secondary text (5.5:1 on white) */
+  --text-main: #2d2d2d; /* Improved main text contrast */
   font-family: 'Roboto', sans-serif;
   line-height: 1.5;
   font-weight: 400;

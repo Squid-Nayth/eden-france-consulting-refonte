@@ -22,15 +22,15 @@ p {
   font-size: 15px;
   font-weight: 300;
   font-family: Roboto, sans-serif;
-  color: #606060;
+  color: var(--text-main);
   line-height: 1.4;
 }
 
 em, li, li a {
   font-size: 15px;
-  font-weight: 300;
+  font-weight: 400; /* Increased weight for better readability */
   font-family: Roboto, sans-serif;
-  color: #34343c;
+  color: var(--text-dark);
 }
 
 a {
